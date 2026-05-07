@@ -281,24 +281,28 @@
   @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
 
   .lightbox-inner {
-      position: relative;
-      width: auto;
-      max-width: 90vw;
-      max-height: 90vh;
-    animation: popIn .25s cubic-bezier(.34,1.56,.64,1);
-  }
+  position: relative;
+  width: fit-content;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: popIn .25s cubic-bezier(.34,1.56,.64,1);
+}
   @keyframes popIn {
     from { opacity:0; transform:scale(.85) }
     to   { opacity:1; transform:scale(1) }
   }
 
   .lightbox-img {
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 30px 80px rgba(0,0,0,.6);
-    display: block;
-    border: 2px solid var(--lbmc, #fff3);
-  }
+  max-width: 88vw;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  display: block;
+  border: 2px solid var(--lbmc, #fff3);
+}
 
   .lightbox-title {
     font-family: 'Lilita One', cursive;
